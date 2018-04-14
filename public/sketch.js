@@ -3,7 +3,8 @@ var canvas;
 var ellipseSize = 0;
 function setup() {
  canvas = createCanvas(windowWidth,windowHeight);
- canvas.style('display','block');
+ canvas.style('z-index','-1','display','block');
+ canvas.position(0,0);
  background(51);
  socket = io.connect('10.254.17.39:3000');
  socket.on('mouse',newDrawing);
